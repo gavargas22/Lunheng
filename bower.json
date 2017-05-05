@@ -1,0 +1,27 @@
+{
+  "name": "bower_components",
+  "homepage": "https://github.com/gavargas22/Lunheng",
+  "authors": [
+    "Guillermo Vargas <gavargas22@gmail.com>"
+  ],
+  "description": "Weather Station",
+  "main": "index.php",
+  "keywords": [
+    "weather",
+    "station",
+    "utep"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2"
+  }
+}
