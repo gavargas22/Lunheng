@@ -1,0 +1,31 @@
+@import "colors";
+section.page-content-wrapper {
+  margin-top: 100px;
+
+  .instrument-cluster {
+    .gauge {
+      .instrument-name {
+        margin-top: 15px;
+        font-weight: 600;
+      }
+      .latest-conditions {
+        .value {
+          font-size: 10rem;
+          margin: -25px 0;
+        }
+        .units {
+          font-size: 3rem;
+        }
+      }
+      &.green {
+        background-color: $lunheng-green;
+        color: white;
+      }
+      &.blue {
+        background-color: $lunheng-blue;
+        color: white;
+      }
+    }
+  }
+
+}

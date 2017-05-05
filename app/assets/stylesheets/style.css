@@ -1,0 +1,18 @@
+section.page-content-wrapper {
+  margin-top: 100px; }
+  section.page-content-wrapper .instrument-cluster .gauge .instrument-name {
+    margin-top: 15px;
+    font-weight: 600; }
+  section.page-content-wrapper .instrument-cluster .gauge .latest-conditions .value {
+    font-size: 10rem;
+    margin: -25px 0; }
+  section.page-content-wrapper .instrument-cluster .gauge .latest-conditions .units {
+    font-size: 3rem; }
+  section.page-content-wrapper .instrument-cluster .gauge.green {
+    background-color: #1BC98E;
+    color: white; }
+  section.page-content-wrapper .instrument-cluster .gauge.blue {
+    background-color: #1ca8dd;
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */
