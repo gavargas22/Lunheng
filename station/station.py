@@ -4,6 +4,7 @@
 # License: GPL 2.0
 
 import os
+import pdb
 from daemon import Daemon
 
 import RPi.GPIO as GPIO
