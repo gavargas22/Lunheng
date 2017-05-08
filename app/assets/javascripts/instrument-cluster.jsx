@@ -46,7 +46,9 @@ var WeatherInstruments = React.createClass({
   render() {
     return (
       // Return the instrument cluster
-      <Gauge data={this.state.weatherData}/>
+      <div>
+        <Gauge data={this.state.weatherData}/>
+      </div>
     );
   }
 });
@@ -71,6 +73,29 @@ var Gauge = React.createClass({
           </div>
           <h4>Current</h4>
         </div>
+      </div>
+    );
+  }
+});
+
+var UnitSelector = React.createClass({
+  render: function() {
+    return (
+      <div className="unit-selector">
+        <form>
+          <div className="radio">
+            <label>
+              <input type="radio" value="metric" checked={true} />
+              Metric
+            </label>
+          </div>
+          <div className="radio">
+            <label>
+              <input type="radio" value="standard" />
+              Standard
+            </label>
+          </div>
+        </form>
       </div>
     );
   }

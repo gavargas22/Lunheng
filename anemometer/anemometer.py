@@ -1,12 +1,22 @@
 #!/usr/bin/env python
+# Based off the code written by Dan Mandle http://dan.mandle.me September 2012
+# Modified by Guillermo Vargas: https://github.com/gavargas22
+# License: GPL 2.0
 
-import time
+import os
+from daemon import Daemon
 
+import RPi.GPIO as GPIO
 import pigpio
 
-GPIO=[4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+from time import gmtime, strftime
+import threading
+import yaml
+import csv
+import rrdtool
 
-NGPIO = len(GPIO)
+
+anemometer = 38
 
 cb = [0]*NGPIO
 last = [0]*NGPIO
