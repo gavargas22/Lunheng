@@ -37,7 +37,7 @@ var Gauge = React.createClass({
       <div className="col-md-3 gauge blue">
         <div className="instrument-name">Anemometer</div>
         <div className="latest-conditions">
-          <div className="value">{props.data.anemometer.speed}</div>
+          <div className="value">{this.props.data.anemometer.speed}</div>
           <div className="units">m/s</div>
         </div>
         <h4>Current</h4>
