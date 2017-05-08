@@ -49,10 +49,16 @@ var WeatherInstruments = React.createClass({
   }
 });
 
+var parseDate = function(dateobject) {
+  var readableDate = new Date(dateobject).toDateString()
+  return readableDate
+}
+
 var Gauge = React.createClass({
   render: function() {
     return (
       <div className="row instrument-cluster">
+        <h2 className="timestamp">Conditions at: {this.props.data.timestamp}</h2>
         <div className="col-md-3 gauge blue">
           <div className="instrument-name">Anemometer</div>
           <div className="latest-conditions">

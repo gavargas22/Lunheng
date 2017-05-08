@@ -15,5 +15,22 @@
       "pressure": 29.92,
       "altitude": 3940
     }
+  },
+  {
+    "timestamp": "2100-05-23T18:25:43.511Z",
+    "anemometer": {
+      "speed": 250,
+      "gusts": 250
+    },
+    "thermometer": {
+      "outside": 27
+    },
+    "hygrometer": {
+      "relative_humidity": 0.4
+    },
+    "barometer": {
+      "pressure": 29.92,
+      "altitude": 3940
+    }
   }
 ]
