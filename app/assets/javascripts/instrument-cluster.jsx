@@ -46,9 +46,7 @@ var WeatherInstruments = React.createClass({
   render() {
     return (
       // Return the instrument cluster
-      <div className="row instrument-cluster">
-        <Gauge data={this.state.weatherData}/>
-      </div>
+      <Gauge data={this.state.weatherData}/>
     );
   }
 });
@@ -56,7 +54,7 @@ var WeatherInstruments = React.createClass({
 var Gauge = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="row instrument-cluster">
         <div className="col-md-3 gauge blue">
           <div className="instrument-name">Anemometer</div>
           <div className="latest-conditions">
@@ -65,9 +63,7 @@ var Gauge = React.createClass({
           </div>
           <h4>Current</h4>
         </div>
-      </div>
-      <div>
-        <div className="col-md-3 gauge greenT">
+        <div className="col-md-3 gauge green">
           <div className="instrument-name">Thermometer</div>
           <div className="latest-conditions">
             <div className="value">{this.props.data.thermometer.outside}</div>
