@@ -64,6 +64,15 @@ var Gauge = React.createClass({
         </div>
         <h4>Current</h4>
       </div>
+
+      <div className="col-md-3 gauge red">
+        <div className="instrument-name">Thermometer</div>
+        <div className="latest-conditions">
+          <div className="value">{this.props.data.thermometer.outside}</div>
+          <div className="units">°C</div>
+        </div>
+        <h4>Current</h4>
+      </div>
     );
   }
 });

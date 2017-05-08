@@ -9,7 +9,7 @@
     "gusts": 10
   },
   "thermometer": {
-    "current": 27
+    "outside": 27
   },
   "hygrometer": {
     "relative_humidity": 0.4
