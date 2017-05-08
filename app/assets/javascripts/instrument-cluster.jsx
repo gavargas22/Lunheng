@@ -34,11 +34,11 @@ var WeatherInstruments = React.createClass({
 var Gauge = React.createClass({
   render: function() {
     return (
-      <div class="col-md-3 gauge blue">
-        <div class="instrument-name">Anemometer</div>
-        <div class="latest-conditions">
-          <div class="value">23</div>
-          <div class="units">mph</div>
+      <div className="col-md-3 gauge blue">
+        <div className="instrument-name">Anemometer</div>
+        <div className="latest-conditions">
+          <div className="value">23</div>
+          <div className="units">mph</div>
         </div>
         <h4>Current</h4>
       </div>
