@@ -46,4 +46,4 @@ var Gauge = React.createClass({
   }
 });
 
-ReactDOMD.render( <WeatherInstruments />, document.getElementById('weather-instruments') );
+ReactDOM.render( <WeatherInstruments />, document.getElementById('weather-instruments') );
