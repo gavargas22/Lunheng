@@ -14,5 +14,8 @@ section.page-content-wrapper {
   section.page-content-wrapper .instrument-cluster .gauge.blue {
     background-color: #1ca8dd;
     color: white; }
+  section.page-content-wrapper .instrument-cluster .gauge.red {
+    background-color: #F45846;
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */
