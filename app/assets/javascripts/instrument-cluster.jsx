@@ -1,7 +1,7 @@
 var WeatherInstruments = React.createClass({
   // Function to load up the resources
   _loadWeatherData: function() {
-    $.getJSON('/data/data.json', (response) => {
+    $.getJSON('app/data/data.json', (response) => {
       this.setState({
         weatherData: response
       });
