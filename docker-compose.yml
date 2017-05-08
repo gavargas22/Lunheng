@@ -1,0 +1,15 @@
+version: '2'
+services:
+  app:
+    image: eboraas/apache-php
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html/
+  #   environment:
+  #     WORDPRESS_DB_PASSWORD: @weather123
+  #
+  # mysql:
+  #   image: mariadb
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: @weather123
