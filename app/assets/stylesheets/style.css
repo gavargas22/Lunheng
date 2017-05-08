@@ -1,18 +1,57 @@
-section.page-content-wrapper {
-  margin-top: 100px; }
-  section.page-content-wrapper .instrument-cluster .gauge .instrument-name {
-    margin-top: 15px;
-    font-weight: 600; }
-  section.page-content-wrapper .instrument-cluster .gauge .latest-conditions .value {
-    font-size: 10rem;
-    margin: -25px 0; }
-  section.page-content-wrapper .instrument-cluster .gauge .latest-conditions .units {
-    font-size: 3rem; }
-  section.page-content-wrapper .instrument-cluster .gauge.green {
-    background-color: #1BC98E;
-    color: white; }
-  section.page-content-wrapper .instrument-cluster .gauge.blue {
-    background-color: #1ca8dd;
-    color: white; }
+/*
+Error: Invalid CSS after "      $": expected identifier, was ".red {"
+        on line 28 of app/assets/stylesheets/sass/style.scss
 
-/*# sourceMappingURL=style.css.map */
+23:       }
+24:       &.blue {
+25:         background-color: $lunheng-blue;
+26:         color: white;
+27:       }
+28:       $.red {
+29:         background-color: $lunheng-red;
+30:         color: white;
+31:       }
+32:     }
+33:   }
+
+Backtrace:
+app/assets/stylesheets/sass/style.scss:28
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:627:in `variable'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/gavargas/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"      $\": expected identifier, was \".red {\"\A         on line 28 of app/assets/stylesheets/sass/style.scss\A \A 23:       }\A 24:       &.blue {\A 25:         background-color: $lunheng-blue;\A 26:         color: white;\A 27:       }\A 28:       $.red {\A 29:         background-color: $lunheng-red;\A 30:         color: white;\A 31:       }\A 32:     }\A 33:   }"; }

@@ -14,22 +14,22 @@ var WeatherInstruments = React.createClass({
       weatherData: {
         "current_conditions_metadata": {
           "timestamp": "2012-04-23T18:25:43.511Z",
-          "wind_speed": 2.5,
-          "wind_gusts": 10
+          "wind_speed": 0,
+          "wind_gusts": 0
         },
         "anemometer": {
           "speed": 0,
           "gusts": 0
         },
         "thermometer": {
-          "current": 27
+          "current": 0
         },
         "hygrometer": {
-          "relative_humidity": 0.4
+          "relative_humidity": 0
         },
         "barometer": {
-          "pressure": 29.92,
-          "altitude": 3940
+          "pressure": 0,
+          "altitude": 0
         }
       }
     }
