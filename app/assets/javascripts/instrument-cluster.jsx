@@ -3,7 +3,7 @@ var WeatherInstruments = React.createClass({
   _loadWeatherData: function() {
     $.getJSON('./data/data.json', (response) => {
       this.setState({
-        weatherData: response
+        weatherData: response[response.length-1]
       });
     });
   },
@@ -12,17 +12,13 @@ var WeatherInstruments = React.createClass({
   getInitialState() {
     return {
       weatherData: {
-        "current_conditions_metadata": {
-          "timestamp": "2012-04-23T18:25:43.511Z",
-          "wind_speed": 0,
-          "wind_gusts": 0
-        },
+        "timestamp": "",
         "anemometer": {
           "speed": 0,
           "gusts": 0
         },
         "thermometer": {
-          "current": 0
+          "outside": 0
         },
         "hygrometer": {
           "relative_humidity": 0
@@ -73,29 +69,6 @@ var Gauge = React.createClass({
           </div>
           <h4>Current</h4>
         </div>
-      </div>
-    );
-  }
-});
-
-var UnitSelector = React.createClass({
-  render: function() {
-    return (
-      <div className="unit-selector">
-        <form>
-          <div className="radio">
-            <label>
-              <input type="radio" value="metric" checked={true} />
-              Metric
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input type="radio" value="standard" />
-              Standard
-            </label>
-          </div>
-        </form>
       </div>
     );
   }
