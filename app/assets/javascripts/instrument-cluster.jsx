@@ -14,22 +14,22 @@ var WeatherInstruments = React.createClass({
       weatherData: {
         "current_conditions_metadata": {
           "timestamp": "2012-04-23T18:25:43.511Z",
-          "wind_speed": 2.5,
-          "wind_gusts": 10
+          "wind_speed": 0,
+          "wind_gusts": 0
         },
         "anemometer": {
           "speed": 0,
           "gusts": 0
         },
         "thermometer": {
-          "current": 27
+          "current": 0
         },
         "hygrometer": {
-          "relative_humidity": 0.4
+          "relative_humidity": 0
         },
         "barometer": {
-          "pressure": 29.92,
-          "altitude": 3940
+          "pressure": 0,
+          "altitude": 0
         }
       }
     }
@@ -46,7 +46,9 @@ var WeatherInstruments = React.createClass({
   render() {
     return (
       // Return the instrument cluster
-      <Gauge data={this.state.weatherData}/>
+      <div>
+        <Gauge data={this.state.weatherData}/>
+      </div>
     );
   }
 });
@@ -71,6 +73,29 @@ var Gauge = React.createClass({
           </div>
           <h4>Current</h4>
         </div>
+      </div>
+    );
+  }
+});
+
+var UnitSelector = React.createClass({
+  render: function() {
+    return (
+      <div className="unit-selector">
+        <form>
+          <div className="radio">
+            <label>
+              <input type="radio" value="metric" checked={true} />
+              Metric
+            </label>
+          </div>
+          <div className="radio">
+            <label>
+              <input type="radio" value="standard" />
+              Standard
+            </label>
+          </div>
+        </form>
       </div>
     );
   }
