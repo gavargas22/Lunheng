@@ -1,0 +1,21 @@
+{
+  "current_conditions_metadata": {
+    "timestamp": "2012-04-23T18:25:43.511Z",
+    "wind_speed": 2.5,
+    "wind_gusts": 10
+  },
+  "anemometer": {
+    "speed": 2.5,
+    "gusts": 10
+  },
+  "thermometer": {
+    "current": 27
+  },
+  "hygrometer": {
+    "relative_humidity": 0.4
+  },
+  "barometer": {
+    "pressure": 29.92,
+    "altitude": 3940
+  }
+}
