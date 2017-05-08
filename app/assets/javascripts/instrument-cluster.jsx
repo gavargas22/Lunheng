@@ -26,7 +26,7 @@ var WeatherInstruments = React.createClass({
       // Return the instrument cluster
       <div className="row instrument-cluster">
         <Gauge data={this.state.weatherData}/>
-      </div>
+      </div>R
     );
   }
 });
@@ -46,4 +46,4 @@ var Gauge = React.createClass({
   }
 });
 
-React.render( <WeatherInstruments />, document.getElementById('weather-instruments') );
+ReactDOM.render( <WeatherInstruments />, document.getElementById('weather-instruments') );
