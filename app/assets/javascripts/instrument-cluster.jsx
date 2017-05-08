@@ -65,7 +65,7 @@ var Gauge = React.createClass({
         <h4>Current</h4>
       </div>
 
-      <div className="col-md-3 gauge red">
+      <div className="col-md-3 gauge green">
         <div className="instrument-name">Thermometer</div>
         <div className="latest-conditions">
           <div className="value">{this.props.data.thermometer.outside}</div>
