@@ -37,9 +37,9 @@ if __name__ == '__main__':
     # Log into JSON
     real_time_json = open('../app/data/data.json', 'r+')
     pdb.set_trace()
-    # json_file = json.writer(real_time_json)
+    json_data = json.load(real_time_json)
 
-
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(anemometer, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
