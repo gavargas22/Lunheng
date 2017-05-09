@@ -82,11 +82,11 @@ if __name__ == '__main__':
             }
 
             real_time_json.seek(0)  # rewind
-            json.dump(data, json_file)
-            json_file.truncate()
-
+            json.dump(data, json_data)
+            json_data.truncate()
+            pdb.set_trace()
             #Sleep
-            time.sleep(1) #set to whatever
+            time.sleep(30) #set to whatever
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
         print "\nKilling Thread..."
