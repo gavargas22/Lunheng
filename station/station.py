@@ -11,7 +11,7 @@ import RPi.GPIO as GPIO
 
 from time import gmtime, strftime
 import threading
-import yaml
+# import yaml
 import csv
 import rrdtool
 import json
