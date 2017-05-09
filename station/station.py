@@ -13,7 +13,7 @@ from time import gmtime, strftime
 import threading
 # import yaml
 import csv
-import rrdtool
+# import rrdtool
 import json
 
 anemometer = 38
