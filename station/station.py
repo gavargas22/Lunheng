@@ -5,7 +5,7 @@
 
 import os
 import pdb
-from daemon import Daemon
+import daemon
 
 import RPi.GPIO as GPIO
 

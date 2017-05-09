@@ -68,4 +68,8 @@ sudo rm -rfv /var/www/html/*
 # Symlink the files of the app
 sudo ln -s ~/Lunheng/* .
 
+# Install pip
+sudo apt-get install -y python-pip
+# Install Daemon
+sudo pip install daemon
 # That's it!
