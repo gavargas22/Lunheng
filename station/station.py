@@ -51,40 +51,40 @@ if __name__ == '__main__':
 
     try:
         while (runner == True):
-        current_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+            current_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-        #Wind Speed
-        #interupt: 1 = 180deg, 2 int = 1 full rotation.
-        windspeed = windspeed_count
-        windspeed_count = 0;
+            #Wind Speed
+            #interupt: 1 = 180deg, 2 int = 1 full rotation.
+            windspeed = windspeed_count
+            windspeed_count = 0;
 
-        #Record to CSV
-        data = {
-          current_time: {
-            "timestamp": current_time,
-            "anemometer": {
-              "speed": windspeed_count,
-              "gusts": 10
-            },
-            "thermometer": {
-              "outside": 27
-            },
-            "hygrometer": {
-              "relative_humidity": 0.4
-            },
-            "barometer": {
-              "pressure": 29.92,
-              "altitude": 3940
+            #Record to CSV
+            data = {
+              current_time: {
+                "timestamp": current_time,
+                "anemometer": {
+                  "speed": windspeed_count,
+                  "gusts": 10
+                },
+                "thermometer": {
+                  "outside": 27
+                },
+                "hygrometer": {
+                  "relative_humidity": 0.4
+                },
+                "barometer": {
+                  "pressure": 29.92,
+                  "altitude": 3940
+                }
+              }
             }
-          }
-        }
 
-        real_time_json.seek(0)  # rewind
-        json.dump(data, json_file)
-        json_file.truncate()
+            real_time_json.seek(0)  # rewind
+            json.dump(data, json_file)
+            json_file.truncate()
 
-        #Sleep
-        time.sleep(1) #set to whatever
+            #Sleep
+            time.sleep(1) #set to whatever
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
         print "\nKilling Thread..."

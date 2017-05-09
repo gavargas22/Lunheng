@@ -19,8 +19,8 @@
   {
     "timestamp": "2100-05-23T18:25:43.511Z",
     "anemometer": {
-      "speed": 250,
-      "gusts": 250
+      "speed": 90,
+      "gusts": 30
     },
     "thermometer": {
       "outside": 27
