@@ -59,6 +59,7 @@ if __name__ == '__main__':
             #interupt: 1 = 180deg, 2 int = 1 full rotation.
             windspeed = windspeed_count
             windspeed_count = 0;
+            pdb.set_trace()
 
             #Record to CSV
             data = {
@@ -80,9 +81,10 @@ if __name__ == '__main__':
                 }
               }
             }
-
+            pdb.set_trace()
             real_time_json.seek(0)  # rewind
             json.dump(data, json_data)
+            pdb.set_trace()
             json_data.truncate()
             pdb.set_trace()
             #Sleep
