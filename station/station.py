@@ -16,7 +16,7 @@ import csv
 # import rrdtool
 import json
 
-anemometer = 38
+anemometer = 7
 
 runner = True
 windspeed_count = 0
@@ -36,7 +36,8 @@ if __name__ == '__main__':
 
     # Log into JSON
     real_time_json = open('../app/data/data.json', 'r+')
-    json_file = json.writer(real_time_json)
+    pdb.set_trace()
+    # json_file = json.writer(real_time_json)
 
 
     GPIO.setup(anemometer, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -48,6 +49,7 @@ if __name__ == '__main__':
 
     GPIO.add_event_detect(anemometer,GPIO.FALLING)
     GPIO.add_event_callback(anemometer,windEventHandler)
+    pdb.set_trace()
 
     try:
         while (runner == True):
