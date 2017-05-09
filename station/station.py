@@ -81,11 +81,9 @@ if __name__ == '__main__':
                 }
               }
             }
+
             pdb.set_trace()
-            real_time_json.seek(0)  # rewind
-            json.dump(data, json_data)
-            pdb.set_trace()
-            json_data.truncate()
+            json_data.append(data)
             pdb.set_trace()
             #Sleep
             time.sleep(30) #set to whatever
