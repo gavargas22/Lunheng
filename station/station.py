@@ -96,7 +96,7 @@ if __name__ == '__main__':
         runner = False
         #gpsp.join() # wait for the thread to finish what it's doing
         print "Almost done."
-        fp.close()
+        # fp.close()
         GPIO.cleanup()
         print "Done.\nExiting."
         exit();
