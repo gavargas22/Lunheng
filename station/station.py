@@ -69,22 +69,20 @@ if __name__ == '__main__':
 
             #Record to CSV
             data = {
-                weatherData: {
-                    "timestamp": current_time,
-                    "anemometer": {
-                      "speed": 13,
-                      "gusts": 0
-                    },
-                    "thermometer": {
-                      "outside": 0
-                    },
-                    "hygrometer": {
-                      "relative_humidity": 0
-                    },
-                    "barometer": {
-                      "pressure": 0,
-                      "altitude": 0
-                    }
+                "timestamp": current_time,
+                "anemometer": {
+                  "speed": 13,
+                  "gusts": 0
+                },
+                "thermometer": {
+                  "outside": 0
+                },
+                "hygrometer": {
+                  "relative_humidity": 0
+                },
+                "barometer": {
+                  "pressure": 0,
+                  "altitude": 0
                 }
             }
 
