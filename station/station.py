@@ -91,7 +91,8 @@ if __name__ == '__main__':
             print(data)
 
             # Remove the file
-            os.remove('../app/data/data.json')
+            if os.path.isfile('../app/data/data.json') :
+                os.remove('../app/data/data.json')
             # Create a new file
             with open('../app/data/data.json', 'w+') as weather_json:
                 # json_data = json.load(weather_json)
