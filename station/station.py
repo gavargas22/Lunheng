@@ -37,9 +37,9 @@ if __name__ == '__main__':
     # csv = csv.writer(fp, delimiter=',')
 
     # Log into JSON
-    real_time_json = open('../app/data/data.json', 'r+')
+    real_time_json = open('../app/data/data.json', 'a')
 
-    json_data = json.load(real_time_json)
+    # json_data = json.load(real_time_json)
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(anemometer, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         runner = False
         #gpsp.join() # wait for the thread to finish what it's doing
         print "Almost done."
-        # fp.close()
+        real_time_json.close()
         GPIO.cleanup()
         print "Done.\nExiting."
         exit();
