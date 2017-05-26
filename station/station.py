@@ -93,7 +93,7 @@ if __name__ == '__main__':
             with open('../app/data/data.json', 'r+b') as weather_json:
                 json_data = json.load(weather_json)
                 latest_entry = data
-                weather_json.append(latest_entry)
+                json_data.append(latest_entry)
                 json.dump(json_data, weather_json)
                 weather_json.close
 
