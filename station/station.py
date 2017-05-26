@@ -35,7 +35,8 @@ if __name__ == '__main__':
 
     # Log into JSON
     real_time_json = io.open('../app/data/data.json', mode='wb')
-    json.dump([], real_time_json)
+    # json.dump([], real_time_json)
+    json_data = json.load(real_time_json)
 
     # json_data = json.load(real_time_json)
     # real_time_json.close()
@@ -89,12 +90,11 @@ if __name__ == '__main__':
 
             print(data)
 
-            # with io.open('../app/data/data.json', mode='wb') as weather_json:
-            #     pdb.set_trace()
-            #     latest_entry = data
-            #     weather_json.append(entry)
-            #     json.dump(json_data, weather_json)
-            #     weather_json.close
+            with io.open('../app/data/data.json', mode='wb') as weather_json:
+                latest_entry = data
+                json_data.append(latest_entry)
+                json.dump(json_data, weather_json)
+                weather_json.close
 
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
