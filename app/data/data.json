@@ -1,21 +1,19 @@
-{
-  'weather_observations': [
-    {
-      "timestamp": "2012-04-23T18:25:43.511Z",
-      "anemometer": {
-        "speed": 2.5,
-        "gusts": 10
-      },
-      "thermometer": {
-        "outside": 27
-      },
-      "hygrometer": {
-        "relative_humidity": 0.4
-      },
-      "barometer": {
-        "pressure": 29.92,
-        "altitude": 3940
-      }
+[
+  {
+    "timestamp": "2012-04-23T18:25:43.511Z",
+    "anemometer": {
+      "speed": 2.5,
+      "gusts": 10
+    },
+    "thermometer": {
+      "outside": 27
+    },
+    "hygrometer": {
+      "relative_humidity": 0.4
+    },
+    "barometer": {
+      "pressure": 29.92,
+      "altitude": 3940
     }
-  ]
-}
+  }
+]
