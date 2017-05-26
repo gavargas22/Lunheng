@@ -105,7 +105,7 @@ if __name__ == '__main__':
         runner = False
         #gpsp.join() # wait for the thread to finish what it's doing
         print "Almost done."
-        real_time_json.close()
+        weather_json.close()
         GPIO.cleanup()
         print "Done.\nExiting."
         exit();
