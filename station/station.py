@@ -88,7 +88,7 @@ if __name__ == '__main__':
             json_data.append(data)
 
             #Sleep
-            time.sleep(30) #set to whatever
+            time.sleep(5) #set to whatever
 
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
