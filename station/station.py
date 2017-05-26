@@ -83,15 +83,16 @@ if __name__ == '__main__':
               }
             }
 
-            with io.open('../app/data/data.json', mode='wb') as weather_json:
-                pdb.set_trace()
-                latest_entry = data
-                json_data.append(entry)
-                json.dump(json_data, weather_json)
-                weather_json.close
-
+            print(data)
             #Sleep
             time.sleep(10) #set to whatever
+
+            # with io.open('../app/data/data.json', mode='wb') as weather_json:
+            #     pdb.set_trace()
+            #     latest_entry = data
+            #     weather_json.append(entry)
+            #     json.dump(json_data, weather_json)
+            #     weather_json.close
 
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
