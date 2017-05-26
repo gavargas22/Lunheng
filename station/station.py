@@ -71,7 +71,7 @@ if __name__ == '__main__':
             data = {
                 "timestamp": current_time,
                 "anemometer": {
-                  "speed": 13,
+                  "speed": windspeed_count,
                   "gusts": 0
                 },
                 "thermometer": {
