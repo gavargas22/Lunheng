@@ -93,7 +93,7 @@ if __name__ == '__main__':
             # Remove the file
             os.remove('../app/data/data.json')
             # Create a new file
-            with open('../app/data/data.json', 'r+b') as weather_json:
+            with open('../app/data/data.json', 'w+') as weather_json:
                 # json_data = json.load(weather_json)
                 latest_entry = data
                 # print(json_data[-1])
