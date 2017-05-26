@@ -3,7 +3,7 @@ var WeatherInstruments = React.createClass({
   _loadWeatherData: function() {
     $.getJSON('./data/data.json', (response) => {
       this.setState({
-        weatherData: response[response.length-1]
+        weatherData: response
       });
     });
   },
