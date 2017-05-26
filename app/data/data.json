@@ -1,1 +1,21 @@
-[]
+[
+  {
+    current_time: {
+      "timestamp": "2017-05-26 05:27:41",
+      "anemometer": {
+        "speed": 0,
+        "gusts": 0
+      },
+      "thermometer": {
+        "outside": 0
+      },
+      "hygrometer": {
+        "relative_humidity": 0
+      },
+      "barometer": {
+        "pressure": 0,
+        "altitude": 0
+      }
+    }
+  }
+]
