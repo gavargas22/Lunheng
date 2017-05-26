@@ -26,6 +26,7 @@ def windEventHandler(pin):
     print "handling wind speed event"
     global windspeed_count
     windspeed_count += 1
+    print windspeed_count
 
 
 # Main Loop
