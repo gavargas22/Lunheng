@@ -33,10 +33,11 @@ def windEventHandler(pin):
 if __name__ == '__main__':
 
     # Log into JSON
-    real_time_json = open('../app/data/data.json', 'r')
+    real_time_json = open('../app/data/data.json', mode='w', encoding='utf-8')
+    json.dump([], f)
 
-    json_data = json.load(real_time_json)
-    real_time_json.close()
+    # json_data = json.load(real_time_json)
+    # real_time_json.close()
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(anemometer, GPIO.IN, pull_up_down=GPIO.PUD_UP)
