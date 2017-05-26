@@ -87,6 +87,7 @@ if __name__ == '__main__':
             # Append the new data
             json_data.append(data)
             # Write JSON file
+            pdb.set_trace()
             json.dump(json_data, real_time_json)
 
             #Sleep
