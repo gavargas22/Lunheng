@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # csv = csv.writer(fp, delimiter=',')
 
     # Log into JSON
-    real_time_json = open('../app/data/data.json', 'r+')
+    real_time_json = open('../app/data/data.json', 'r+', encoding='utf-8')
 
     json_data = json.load(real_time_json)
 
@@ -84,8 +84,10 @@ if __name__ == '__main__':
               }
             }
 
-
+            # Append the new data
             json_data.append(data)
+            # Write JSON file
+            json.dump(json_data, real_time_json)
 
             #Sleep
             time.sleep(5) #set to whatever
