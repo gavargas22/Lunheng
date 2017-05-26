@@ -34,10 +34,11 @@ def windEventHandler(pin):
 if __name__ == '__main__':
 
     # Log into JSON
-    real_time_json = io.open('../app/data/data.json', mode='wb')
+    real_time_json = open('../app/data/data.json', 'wb')
     # json.dump([], real_time_json)
     json_data = json.load(real_time_json)
-
+    print("JSON Data Initial Contents")
+    print(json_data)
     # json_data = json.load(real_time_json)
     # real_time_json.close()
 
@@ -90,7 +91,7 @@ if __name__ == '__main__':
 
             print(data)
 
-            with io.open('../app/data/data.json', mode='wb') as weather_json:
+            with open('../app/data/data.json', 'wb') as weather_json:
                 latest_entry = data
                 json_data.append(latest_entry)
                 json.dump(json_data, weather_json)
