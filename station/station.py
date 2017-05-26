@@ -32,14 +32,11 @@ def windEventHandler(pin):
 # Main Loop
 if __name__ == '__main__':
 
-    # Logger open CSV
-    # fp = open('test.csv', 'a')
-    # csv = csv.writer(fp, delimiter=',')
-
     # Log into JSON
-    real_time_json = open('../app/data/data.json', 'r+')
+    real_time_json = open('../app/data/data.json', 'r')
 
-    # json_data = json.load(real_time_json)
+    json_data = json.load(real_time_json)
+    real_time_json.close()
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(anemometer, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -84,11 +81,12 @@ if __name__ == '__main__':
               }
             }
 
-            # Append the new data
-            json_data.append(data)
-            # Write JSON file
-            pdb.set_trace()
-            json.dump(json_data, real_time_json)
+            with open('../app/data/data.json', mode='w', encoding='utf-8') as weather_json:
+                pdb.set_trace()
+                latest_entry = data
+                json_data.append(entry)
+                json.dump(json_data, weather_json)
+                weather_json.close
 
             #Sleep
             time.sleep(10) #set to whatever
