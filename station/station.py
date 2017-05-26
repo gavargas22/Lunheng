@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # csv = csv.writer(fp, delimiter=',')
 
     # Log into JSON
-    real_time_json = open('../app/data/data.json', 'r+', encoding='utf-8')
+    real_time_json = open('../app/data/data.json', 'r+')
 
     json_data = json.load(real_time_json)
 
