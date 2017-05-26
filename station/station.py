@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     # Log into JSON
     real_time_json = open('../app/data/data.json', 'r+')
-    pdb.set_trace()
+
     json_data = json.load(real_time_json)
 
     GPIO.setmode(GPIO.BOARD)
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     GPIO.add_event_detect(anemometer,GPIO.FALLING)
     GPIO.add_event_callback(anemometer,windEventHandler)
-    pdb.set_trace()
+
 
     try:
         while (runner == True):
@@ -60,7 +60,7 @@ if __name__ == '__main__':
             #interupt: 1 = 180deg, 2 int = 1 full rotation.
             windspeed = windspeed_count
             windspeed_count = 0;
-            pdb.set_trace()
+
 
             #Record to CSV
             data = {
@@ -83,12 +83,12 @@ if __name__ == '__main__':
               }
             }
 
-            pdb.set_trace()
+
             json_data.append(data)
-            pdb.set_trace()
+
             #Sleep
             time.sleep(30) #set to whatever
-            pdb.set_trace()
+
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
         print "\nKilling Thread..."
