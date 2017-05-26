@@ -90,7 +90,7 @@ if __name__ == '__main__':
             json.dump(json_data, real_time_json)
 
             #Sleep
-            time.sleep(5) #set to whatever
+            time.sleep(10) #set to whatever
 
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
