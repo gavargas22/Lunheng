@@ -93,9 +93,11 @@ if __name__ == '__main__':
             with open('../app/data/data.json', 'r+b') as weather_json:
                 json_data = json.load(weather_json)
                 latest_entry = data
-                json_data[0].append(latest_entry)
-                json.dump(json_data, weather_json)
-                weather_json.close
+                print(json_data)
+                print(json_data[0])
+                # json_data[0].append(latest_entry)
+                # json.dump(json_data, weather_json)
+                # weather_json.close
 
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
