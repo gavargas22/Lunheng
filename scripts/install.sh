@@ -38,6 +38,13 @@ sudo apt-get install -y build-essential libssl-dev libcurl4-gnutls-dev libexpat1
 
 sudo apt-get install -y git
 
+# Install Node
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+sudo dpkg -i node_latest_armhf.deb
+# install Bower
+sudo npm install -g bower
+
+
 # Collect the ip address of the RPi
 # echo ""
 # read -e -p "Enter the ip address of the Raspberry Pi: " PI_ADDRESS

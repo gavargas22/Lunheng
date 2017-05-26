@@ -36,7 +36,7 @@ if __name__ == '__main__':
     # csv = csv.writer(fp, delimiter=',')
 
     # Log into JSON
-    real_time_json = open('../app/data/data.json', 'w')
+    real_time_json = open('../app/data/data.json', 'r+')
     pdb.set_trace()
     json_data = json.load(real_time_json)
 
