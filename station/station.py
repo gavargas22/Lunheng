@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     # Log into JSON
     real_time_json = io.open('../app/data/data.json', mode='w', encoding='utf-8')
-    json.dump([], f)
+    json.dump([], real_time_json)
 
     # json_data = json.load(real_time_json)
     # real_time_json.close()
