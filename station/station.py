@@ -94,7 +94,7 @@ if __name__ == '__main__':
                 json_data = json.load(weather_json)
                 latest_entry = data
                 print(json_data)
-                print(json_data[0])
+                print(json_data['weather_observations'])
                 # json_data[0].append(latest_entry)
                 # json.dump(json_data, weather_json)
                 # weather_json.close
