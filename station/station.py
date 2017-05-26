@@ -60,34 +60,34 @@ if __name__ == '__main__':
             #interupt: 1 = 180deg, 2 int = 1 full rotation.
             windspeed = windspeed_count
             windspeed_count = 0;
-
-
-            # #Record to CSV
-            # data = {
-            #   current_time: {
-            #     "timestamp": current_time,
-            #     "anemometer": {
-            #       "speed": windspeed_count,
-            #       "gusts": 10
-            #     },
-            #     "thermometer": {
-            #       "outside": 27
-            #     },
-            #     "hygrometer": {
-            #       "relative_humidity": 0.4
-            #     },
-            #     "barometer": {
-            #       "pressure": 29.92,
-            #       "altitude": 3940
-            #     }
-            #   }
-            # }
-
-            # print(data)
             #Sleep
             time.sleep(10) #set to whatever
+            # Build the data object
             print(current_time)
             print(windspeed_count)
+
+            #Record to CSV
+            data = {
+              current_time: {
+                "timestamp": current_time,
+                "anemometer": {
+                  "speed": windspeed_count,
+                  "gusts": 10
+                },
+                "thermometer": {
+                  "outside": 27
+                },
+                "hygrometer": {
+                  "relative_humidity": 0.4
+                },
+                "barometer": {
+                  "pressure": 29.92,
+                  "altitude": 3940
+                }
+              }
+            }
+
+            print(data)
 
             # with io.open('../app/data/data.json', mode='wb') as weather_json:
             #     pdb.set_trace()
