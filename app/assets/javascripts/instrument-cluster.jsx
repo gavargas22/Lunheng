@@ -33,7 +33,7 @@ var WeatherInstruments = React.createClass({
   // Function executed when the component just mounted
   componentDidMount() {
     this._loadWeatherData();
-    setInterval(this._loadWeatherData, 2000);
+    setInterval(this._loadWeatherData, 5000);
   },
   componentWillUnmount() {
     clearInterval(this.interval);
