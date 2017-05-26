@@ -7,6 +7,7 @@ import os
 import pdb
 import daemon
 import time
+import io
 
 import RPi.GPIO as GPIO
 
@@ -33,7 +34,7 @@ def windEventHandler(pin):
 if __name__ == '__main__':
 
     # Log into JSON
-    real_time_json = open('../app/data/data.json', mode='w', encoding='utf-8')
+    real_time_json = io.open('../app/data/data.json', mode='w', encoding='utf-8')
     json.dump([], f)
 
     # json_data = json.load(real_time_json)
@@ -82,7 +83,7 @@ if __name__ == '__main__':
               }
             }
 
-            with open('../app/data/data.json', mode='w', encoding='utf-8') as weather_json:
+            with io.open('../app/data/data.json', mode='w', encoding='utf-8') as weather_json:
                 pdb.set_trace()
                 latest_entry = data
                 json_data.append(entry)
