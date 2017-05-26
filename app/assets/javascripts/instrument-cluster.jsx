@@ -1,7 +1,7 @@
 var WeatherInstruments = React.createClass({
   // Function to load up the resources
   _loadWeatherData: function() {
-    $.getJSON('./data/data.json', (response) => {
+    $.getJSON('data/data.json', (response) => {
       this.setState({
         weatherData: response
       });
@@ -33,7 +33,7 @@ var WeatherInstruments = React.createClass({
   // Function executed when the component just mounted
   componentDidMount() {
     this._loadWeatherData();
-    setInterval(this._loadWeatherData, 1000);
+    setInterval(this._loadWeatherData, 5000);
   },
   componentWillUnmount() {
     clearInterval(this.interval);

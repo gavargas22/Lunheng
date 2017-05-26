@@ -1,5 +1,5 @@
 [
-  {
+  weatherData: {
     "timestamp": "0",
     "anemometer": {
       "speed": 0,
