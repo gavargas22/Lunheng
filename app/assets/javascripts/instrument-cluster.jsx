@@ -14,7 +14,7 @@ var WeatherInstruments = React.createClass({
       weatherData: {
         "timestamp": "",
         "anemometer": {
-          "speed": 25,
+          "speed": 0,
           "gusts": 0
         },
         "thermometer": {

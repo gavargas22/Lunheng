@@ -72,7 +72,7 @@ if __name__ == '__main__':
               current_time: {
                 "timestamp": current_time,
                 "anemometer": {
-                  "speed": windspeed_count,
+                  "speed": 25,
                   "gusts": 10
                 },
                 "thermometer": {
