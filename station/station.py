@@ -95,9 +95,9 @@ if __name__ == '__main__':
                 latest_entry = data
                 # print(json_data)
                 json_data[-1].update(latest_entry)
-                print(json_data[-1])
-                # json.dump(json_data, weather_json)
-                # weather_json.close
+                # print(json_data[-1])
+                json.dump(json_data, weather_json)
+                weather_json.close
 
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
