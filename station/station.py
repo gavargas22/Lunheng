@@ -88,6 +88,7 @@ if __name__ == '__main__':
             pdb.set_trace()
             #Sleep
             time.sleep(30) #set to whatever
+            pdb.set_trace()
 
     except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
         print "\nKilling Thread..."
