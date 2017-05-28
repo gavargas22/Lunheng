@@ -1,13 +1,4 @@
 var WeatherInstruments = React.createClass({
-  // Function to convert to certain units
-  _convertToSelectedSpeedUnits: function(units, speed_in_mps) {
-    converted_speed = 0.0
-    if (units == "mph") {
-      converted_speed = parseFloat(speed_in_mps) *(3600 * 0.000621371)
-    }
-    return converted_speed
-  },
-
   // Function to load up the resources
   _loadWeatherData: function() {
     $.getJSON('./data/data.json', (response) => {
@@ -64,8 +55,27 @@ var parseDate = function(dateobject) {
 }
 
 var Gauge = React.createClass({
+  // Function to convert to certain units
+  _convertToSelectedSpeedUnits: function(units, speed_in_mps) {
+    converted_speed = 0.0
+    if (units == "mph") {
+      converted_speed = parseFloat(speed_in_mps) *(3600 * 0.000621371)
+    }
+    return converted_speed
+  },
+
   render: function() {
     return (
+      // <div className="container">
+      //   <div className="unit-selector">
+      //     <div className="btn-group" role="group">
+      //       <button type="button" className="btn btn-default" id="metric" onClick={this._convertToSelectedSpeedUnits}>Metric</button>
+      //       <button type="button" className="btn btn-default" id="english" onClick={this._convertToSelectedSpeedUnits}>English</button>
+      //       <button type="button" className="btn btn-default" id="raw" onClick={this._convertToSelectedSpeedUnits}>Raw</button>
+      //     </div>
+      //   </div>
+      // </div>
+
       <div className="row instrument-cluster">
         <h2 className="timestamp">Conditions at: {this.props.data.timestamp}</h2>
         <div className="col-md-3 gauge blue">
