@@ -34,8 +34,6 @@ def windEventHandler(pin):
     print windspeed_count
 
 def calculate_wind_speed_from_pulses(windspeed_count_number):
-    print "Calculating Speed"
-    print(math.pi)
     anemometer_speed = (((float(1.0/2.0)*float(windspeed_count_number))*((2)*float(math.pi)*float(0.03048)))/float(10))
     # Reduce precision of speed calculation
     reduced_precision_anemometer_speed = "%.3f" % round(anemometer_speed, 2)
