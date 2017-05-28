@@ -23,7 +23,8 @@ import json
 anemometer = 7
 # The sampling time in seconds
 sampling_time = 10
-# Anemometer Factor
+
+# Anemometer Factor (Change this value to the correct calculated factor)
 anemometer_factor = 3.2
 
 runner = True
