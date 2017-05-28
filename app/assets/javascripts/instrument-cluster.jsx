@@ -59,9 +59,15 @@ var Gauge = React.createClass({
   _convertToSelectedSpeedUnits: function(units, speed_in_mps) {
     var converted_speed = 0.0
     if (units == "mph") {
-      converted_speed = parseFloat(speed_in_mps) *(3600 * 0.000621371)
+      converted_speed = Number((parseFloat(speed_in_mps) * (3600 * 0.000621371)).toFixed(1)
     }
     return converted_speed
+  },
+
+  _returnCalculationStatement: function() {
+    return (
+      <h1>Hello World!</h1>
+    );
   },
 
   render: function() {
