@@ -1,4 +1,13 @@
 var WeatherInstruments = React.createClass({
+  // Function to convert to certain units
+  _convertToSelectedSpeedUnits: function(units, speed_in_mps) {
+    converted_speed = 0.0
+    if (units == "mph") {
+      converted_speed = parseFloat(speed_in_mps) *(3600 * 0.000621371)
+    }
+    return converted_speed
+  },
+
   // Function to load up the resources
   _loadWeatherData: function() {
     $.getJSON('./data/data.json', (response) => {
@@ -62,7 +71,7 @@ var Gauge = React.createClass({
         <div className="col-md-3 gauge blue">
           <div className="instrument-name">Anemometer</div>
           <div className="latest-conditions">
-            <div className="value">{this.props.data.anemometer.speed}</div>
+            <div className="value">{this._convertToSelectedSpeedUnits("mph", this.props.data.anemometer.speed)}</div>
             <div className="units">m/s</div>
           </div>
           <h4>Current</h4>
