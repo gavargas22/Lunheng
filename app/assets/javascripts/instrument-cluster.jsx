@@ -72,7 +72,7 @@ var Gauge = React.createClass({
           <div className="instrument-name">Anemometer</div>
           <div className="latest-conditions">
             <div className="value">{this._convertToSelectedSpeedUnits("mph", this.props.data.anemometer.speed)}</div>
-            <div className="units">m/s</div>
+            <div className="units">mph</div>
           </div>
           <h4>Current</h4>
         </div>
