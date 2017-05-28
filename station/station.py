@@ -23,6 +23,8 @@ import json
 anemometer = 7
 # The sampling time in seconds
 sampling_time = 10
+# Anemometer Factor
+anemometer_factor = 3.2
 
 runner = True
 windspeed_count = 0
@@ -34,7 +36,7 @@ def windEventHandler(pin):
     print windspeed_count
 
 def calculate_wind_speed_from_pulses(windspeed_count_number):
-    anemometer_speed = (((float(0.5*windspeed_count_number))*(float(math.pi)*float(0.0508)))/(float(10)))
+    anemometer_speed = float(anemometer_factor)*(((float(0.5*windspeed_count_number))*(float(math.pi)*float(0.0508)))/(float(10)))
     # Reduce precision of speed calculation
     reduced_precision_anemometer_speed = "%f" % round(anemometer_speed, 2)
     return reduced_precision_anemometer_speed
