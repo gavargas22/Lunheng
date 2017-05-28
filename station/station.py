@@ -8,6 +8,7 @@ import pdb
 import daemon
 import time
 import io
+import math
 
 import RPi.GPIO as GPIO
 
@@ -18,7 +19,10 @@ import csv
 # import rrdtool
 import json
 
+# The pin number where the anemometer is connected
 anemometer = 7
+# The sampling time in seconds
+sampling_time = 10
 
 runner = True
 windspeed_count = 0
@@ -29,28 +33,25 @@ def windEventHandler(pin):
     windspeed_count += 1
     print windspeed_count
 
+def calculate_wind_speed_from_pulses(windspeed_count_number):
+    anemometer_speed = ((((1/2)*(windspeed_count_number))*((2)*(math.pi)*(0.03048)))/(sampling_time))
+    return anemometer_speed
+
 
 # Main Loop
 if __name__ == '__main__':
 
-    # Log into JSON
-    # real_time_json = open('../app/data/data.json', 'wb')
-    # json.dump([], real_time_json)
-    # json_data = json.load(real_time_json)
-    # print("JSON Data Initial Contents")
-    # json_data = json.load(real_time_json)
-    # real_time_json.close()
-
+    # Set the GPIO mode to Board
     GPIO.setmode(GPIO.BOARD)
+    # Set up the kind of GPIO befavior on the anemometer pi
     GPIO.setup(anemometer, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
     # tell the GPIO library to look out for an
     # event on pin x and deal with it by calling
-    # the buttonEventHandler function
-
-    GPIO.add_event_detect(anemometer,GPIO.FALLING)
-    GPIO.add_event_callback(anemometer,windEventHandler)
+    # the windEventHandler function
+    GPIO.add_event_detect(anemometer, GPIO.FALLING)
+    GPIO.add_event_callback(anemometer, windEventHandler)
 
 
     try:
@@ -71,7 +72,7 @@ if __name__ == '__main__':
             data = {
                 "timestamp": current_time,
                 "anemometer": {
-                  "speed": windspeed_count,
+                  "speed": calculate_wind_speed_from_pulses(windspeed_count),
                   "gusts": 0
                 },
                 "thermometer": {
