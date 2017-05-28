@@ -57,7 +57,7 @@ var parseDate = function(dateobject) {
 var Gauge = React.createClass({
   // Function to convert to certain units
   _convertToSelectedSpeedUnits: function(units, speed_in_mps) {
-    converted_speed = 0.0
+    var converted_speed = 0.0
     if (units == "mph") {
       converted_speed = parseFloat(speed_in_mps) *(3600 * 0.000621371)
     }
