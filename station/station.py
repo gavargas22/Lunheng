@@ -67,6 +67,7 @@ if __name__ == '__main__':
             # Build the data object
             print(current_time)
             print(windspeed_count)
+            print(calculate_wind_speed_from_pulses(windspeed_count))
 
             #Record to CSV
             data = {
