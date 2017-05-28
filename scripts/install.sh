@@ -73,7 +73,7 @@ sudo service apache2 restart
 sudo rm -rfv /var/www/html/*
 
 # Symlink the files of the app
-sudo ln -s ~/Lunheng/* .
+sudo ln -s ~/Desktop/Lunheng/* /var/www/html/
 
 # Install pip
 sudo apt-get install -y python-pip
