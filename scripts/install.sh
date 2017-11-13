@@ -83,7 +83,7 @@ sudo pip install daemon
 
 #Install dependencies for BME280 sensor board
 sudo apt-get update
-sudo apt-get install build-essential python-pip python-dev python-smbus git
+sudo apt-get install -y build-essential python-pip python-dev python-smbus git
 git clone https://github.com/adafruit/Adafruit_Python_GPIO.git
 cd Adafruit_Python_GPIO
 sudo python setup.py install
