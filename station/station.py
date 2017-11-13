@@ -9,6 +9,7 @@ import daemon
 import time
 import io
 import math
+import bme280 as baro
 
 import RPi.GPIO as GPIO
 
@@ -67,12 +68,17 @@ if __name__ == '__main__':
             #interupt: 1 = 180deg, 2 int = 1 full rotation.
             windspeed = windspeed_count
             windspeed_count = 0;
+            # Read the Barometer data
+            temperature, pressure, humidity = baro.readBME280All()
             #Sleep
             time.sleep(10) #set to whatever
             # Build the data object
             print(current_time)
             print(windspeed_count)
             print(calculate_wind_speed_from_pulses(windspeed_count))
+            print(temperature)
+            print(pressure)
+            print(humidity)
 
             #Record to CSV
             data = {
@@ -82,13 +88,13 @@ if __name__ == '__main__':
                   "gusts": 0
                 },
                 "thermometer": {
-                  "outside": 0
+                  "outside": temperature
                 },
                 "hygrometer": {
-                  "relative_humidity": 0
+                  "relative_humidity": humidity
                 },
                 "barometer": {
-                  "pressure": 0,
+                  "pressure": pressure,
                   "altitude": 0
                 }
             }
