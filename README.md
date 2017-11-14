@@ -2,13 +2,12 @@
   <img width="200" heigth="200" src="https://webpack.js.org/assets/icon-square-big.svg">
 </a>
 
-**TL;DR**
-
-* Open Source Project to use homemade weather sensors with Raspberry Pi to create a weather sensor network
-
 # What is Lunheng, the name (From Wikipedia)?
 The Lunheng (Chinese: 論衡; pinyin: Lùnhéng; Wade–Giles: Lun-heng; literally: "discourse balance"), published in 80 CE, is a wide-ranging Chinese classic text containing critical essays by Wang Chong (27- ca. 100 CE) on natural science, Chinese mythology, philosophy, and literature.
 
+**TL;DR**
+
+* Open Source Project to use homemade weather sensors with Raspberry Pi to create a weather sensor network
 
 # Requirements
 In order to use the platform, you need the following:
