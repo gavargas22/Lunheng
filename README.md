@@ -1,11 +1,6 @@
-<div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <img width="200" heigth="200" src="https://webpack.js.org/assets/icon-square-big.svg">
-  </a>
-  <br>
-  <br>
-</center>
-
+<a href="https://github.com/webpack/webpack">
+  <img width="200" heigth="200" src="https://webpack.js.org/assets/icon-square-big.svg">
+</a>
 
 **TL;DR**
 
@@ -36,7 +31,3 @@ cd Lunheng/scripts && chmod +x install.sh
 ```
 
 ### Get Started
-
-Check out webpack's quick [**Get Started**](https://webpack.js.org/get-started/) guide and the [other guides](https://webpack.js.org/guides/).
-
-<h2 align="center">Concepts</h2>
