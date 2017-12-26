@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gavargas22/Lunheng#readme",
   "dependencies": {
+    "express": "^4.16.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "webpack": "^2.5.1",
